@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Salamanca (Tienda de las maquetas)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script defer src="fontawesome-free-5.15.1-web/js/all.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Model Salamanca</h1>
+        <h2>Tienda de Modelismo</h2>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Inicio</a></li>
+            <li><a href="tren.html"><i class="fas fa-subway"></i> <p>Trenes</p></a> </li>
+            <li><a href="avion.html"><i class="fas fa-plane"></i> <p>Aviones</p></a></li>
+            <li id="liOtros"><a href="#">Otros <i class="fas fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="coche.html"><i class="fas fa-car"></i> <p>Coches</p></a></li>
+                    <li><a href="barco.html"><i class="fas fa-ship"></i> <p>Barcos</p></a></li>
+                </ul>
+            </li>
+            <li><a href="precio.html"><i class="fas fa-coins"></i> <p>Lista de los precios</p></a></li>
+            <li><a href="contacto.html"><i class="fas fa-user-friends"></i> <p>Contacto</p></a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="sectionContacto">
+            <h3>Contacto</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.621817260385!2d-5.660911384299392!3d40.96786292985917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f2611a12ce5a9%3A0x4fb53d1f18178f67!2sGran%20V%C3%ADa%2C%205%2C%2037001%20Salamanca!5e0!3m2!1ses!2ses!4v1608304099086!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <p>
+                <strong>Direccion: </strong> Gran Via 5,37001 Salamanca (España)
+            </p>
+            <p>
+                <strong>Telefono: </strong><a href="tel:923216675" class="aEnlaceTelefono">923 21 66 75</a>
+            </p>
+            <p>
+                <strong>Email: </strong> <a href="mailto:info@modelsalamanca.es" class="aEnlaceTelefono">info@modelsalamanca.es</a>
+            </p>
+        </section>
+        <section>
+            <h3>Contacte con nosotros</h3>
+            <form action="#" method="post">
+                <p>Nombre:</p>
+                <input type="text" name="nombre" id="nombre">
+                <br>
+                <p>Apellidos:</p>
+                <input type="text" name="apellidos" id="apellidos">
+                <br>
+                <p>Localidad:</p>
+                <input type="text" name="localidad" id="localidad">
+                <br>
+                <p>Provincia:</p>
+                <input type="text" name="provincia" id="provincia">
+                <br>
+                <p>Codigo Postal:</p>
+                <input type="number" name="codigoPostal" id="codigoPostal">
+                <br>
+                <p>E-mail:</p>
+                <input type="email" name="email" id="email">
+                <br>
+                <p>Telefono:</p>
+                <input type="tel" name="telefono" id="telefono">
+                <br>
+                <p id="pMensaje">Mensaje:</p>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                <br>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="button" value="Cancelar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>Contacto</h3>
+        <p>
+            <strong>Direccion: </strong> Gran Via 5,37001 Salamanca (España)
+        </p>
+        <p>
+            <strong>Telefono: </strong><a href="tel:923216675">923 21 66 75</a>
+        </p>
+        <p>
+            <strong>Email: </strong> <a href="mailto:info@modelsalamanca.es">info@modelsalamanca.es</a>
+        </p>
+    </footer>
+</body>
+</html>
