@@ -35,6 +35,10 @@ header>h2{
     margin-left: 1%;
     text-align: center;
 }
+header>p{
+    text-align: right;
+    color: white;
+}
 nav{
     padding: 1%;
     background-color: rgba(202, 120, 27, 0.849);
@@ -45,23 +49,18 @@ nav>ul{
     list-style-type: none;
 }
 nav>ul>li{
-    float: left;
     text-align: center;
-    width: 16%;
     font-size: 20px;
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
-    position: relative;
 }
 #liOtros>ul{
     display: none;
     list-style-type: none;
-    position: absolute;
 }
 #liOtros:hover>ul
 {
-    display: block;
     width: 100%;
     background-color: rgba(202, 120, 27,1);
     box-shadow: 5px 7px 10px rgba(0,0,0,.5);
@@ -112,7 +111,7 @@ main>section>h3{
 main>section>p{
     line-height: 1.7em;
 }
-main>section>div.divModelismo{
+main>section>div>div.divModelismo{
     border: 4px solid rgba(202, 120, 27, 0.849);
     border-radius: 25px;
     width: 90%;
@@ -120,17 +119,17 @@ main>section>div.divModelismo{
     margin: 5%;
     padding: 2%;
 }
-main>section>div.divModelismo>h4{
+main>section>div>div.divModelismo>h4{
     padding: 5px;
 }
-main>section>div.divModelismo>img
+main>section>div>div.divModelismo>img
 {
     width: 50%;
     margin-left: 24%;
     max-width: 50%;
     padding: 15px;
 }
-main>section>div.divModelismo>p{
+main>section>div>div.divModelismo>p{
     padding: 5px;
     line-height: 2em;
 }
@@ -138,7 +137,7 @@ main>section>div.divModelismo>p{
     float: right;
     font-size: 30px;
 }
-main>section>div.divModelismo>input[type="button"]
+main>section>div>div.divModelismo>input[type="button"]
 {
     border: 2px solid;
     background-color: #e61010;
@@ -151,15 +150,39 @@ main>section>div.divModelismo>input[type="button"]
     cursor: pointer;
     margin-top: 70px;
 }
-main>section>div.divModelismo>input[type="button"]:hover
+main>section>div>div.divModelismo>input[type="button"]:hover
 {
     background-color: #498ac1;
     transition: .3s;
+}
+main>section>div#listaCarrito>div{
+    text-align: right;
+}
+main>section>div#listaCarrito>div>p{
+    font-size: 50px;
+    padding: 1%;
+    display: inline-block;
 }
 main>section#sectionContacto{
     margin-bottom: 40px;
     text-align: center;
     padding: 2%;
+}
+main>section>div#listaCarrito>a{
+    display: inline-block;
+    background-color: rgba(17, 243, 169,1);
+    width: 10%;
+    border: 3px solid rgba(17, 243, 168,1);
+    text-align: center;
+    border-radius: 1em;
+    height: 50px;
+    padding: 0.5%;
+    margin-right: 1%;
+    margin-left: 10%;
+}
+main>section>div#listaCarrito>a:hover{
+    background-color: #50e235;
+    border-color: #50e236;
 }
 .aEnlaceTelefono:hover{
     color: blue;
@@ -204,7 +227,7 @@ main>section>form>input[type="button"]
     height: 30px;
     color: white;
 }
-main>section>table{
+main>section>div>table{
     border-collapse: collapse;
     width: 100%;
     border: 1px solid black;
@@ -225,10 +248,59 @@ td>img{
     height: 100px;
     padding: 3%;
 }
+td>p{
+    display: inline-block;
+}
 footer{
     background-color: rgba(202, 120, 27, 0.849);
     padding: 5%;
 }
 footer>p{
     line-height: 2em;
+}
+@media (max-width: 1024px)
+{
+    header>p{
+        padding: 1%;
+    }
+    nav>ul>li>a{
+        padding: 4%;
+    }
+    .menu_bar{
+        display: block;
+        padding: 1%;
+        background-color: rgba(202, 120, 27, 0.849);
+        text-align: right;
+    }
+    .btnMenu{
+        width: 100%;
+        display: inline-block;
+    }
+    nav{
+        display: none;
+    }
+    nav:hover{
+        display: inline-block;
+    }
+}
+@media (min-width: 1024px)
+{
+   nav>ul>li{
+       float: left;
+       width: 14%;
+       position: relative;
+   }
+   nav{
+       display: inline-block !important;
+   }
+   #liOtros>ul{
+       position: absolute;
+   }
+   #liOtros:hover>ul
+    {
+        display: block;
+    }
+    .menu_bar{
+        display: none;
+    }
 }

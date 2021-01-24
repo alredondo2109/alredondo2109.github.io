@@ -13,8 +13,8 @@
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
 </head>
-<!--Este sirve para cargar el menu-->
-<body onload="cargarMenu()">
+<!--Este sirve para cargar el menu y los carritos para mostrar la lista de los carritos-->
+<body onload="mostrarCarrito();cargarMenu();">
     <header>
         <h1>Model Salamanca</h1>
         <h2>Tienda de Modelismo</h2>
@@ -41,31 +41,10 @@
     </nav>
     <main>
         <section>
-                <h3>
-                    Quienes somos
-                </h3>
-                <p>
-                    Modelo Salamanca fue creada el día 21 de septiembre de 2018 con la intención de dar servicio a los aficionados al modelismo y radiocontrol principalmente de Salamanca capital y provincia.
-                </p>
-                <p>
-                    Son ya unos cuantos años desde los comienzos motivo por el cual nos hemos tenido que ir adaptando a los nuevos tiempos y las exigencias de nuestros clientes. Ello nos llevó en enero del año 2020 a cambiar de instalaciones a un local mucho más moderno, amplio y cómodo con el fin de poder aumentar la gama de productos y crear un lugar mucho más agradable en donde poder dar atención a nuestros clientes.
-                </p>
-                <p>
-                    Ahora comenzamos una nueva etapa a través de esta tienda online con la que queremos tener un escaparate de nuestro catálogo de productos para aquellos que no están tan cerca de nuestras instalaciones para que puedan hacer sus compras desde casa con toda la garantía que ofrece nuestra empresa. 
-                </p>
-                <p>
-                    Los campos fundamentales en los que trabajamos son:
-                </p>
-                <p>
-                    <strong>Radiocontrol:</strong>
-                    En Model Salamanca puedes encontrar desde coches, aviones, lanchas, barcos, submarinos y una variedad increíble de helicópteros.
-                </p>
-                <p>
-                    <strong>Modelismo:</strong> Trabajamos con los mejores fabricantes de maquetas, barcos de madera, kits de construcciones de cerámica y casas de muñecas del mercado. Además disponemos de multitud de herramientas y accesorios.
-                </p>
-                <p>
-                    <strong>Slot:</strong> Somos distribuidores de la marca Ninco y trabajamos todos los productos de esta prestigiosa marca de slot.
-                </p>
+            <h3>Carrito</h3>
+            <div id="listaCarrito">
+
+            </div>
         </section>
     </main>
     <footer>

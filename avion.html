@@ -8,12 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <script defer src="fontawesome-free-5.15.1-web/js/all.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
 </head>
-<body>
+<!--Este sirve para cargar el menu y los modelismo para mostrar la lista del modelismo-->
+<body onload="cargarModelismo();cargarMenu();">
     <header>
         <h1>Model Salamanca</h1>
         <h2>Tienda de Modelismo</h2>
+        <p id="horaActual"></p>
     </header>
+    <div class="menu_bar">
+        <a href="#" class="btnMenu"><i class="fas fa-bars"></i></a>
+    </div>
     <nav>
         <ul>
             <li> <a href="index.html">Inicio</a></li>
@@ -26,49 +35,16 @@
                 </ul>
             </li>
             <li><a href="precio.html"><i class="fas fa-coins"></i> <p>Lista de los precios</p></a></li>
+            <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> <p>Carrito</p></a></li>
             <li><a href="contacto.html"><i class="fas fa-user-friends"></i> <p>Contacto</p></a></li>
         </ul>
     </nav>
     <main>
         <section>
             <h3>Aviones</h3>
-            <div id="a330900" class="divModelismo">
-                <h4>Airbus A330-900neo</h4>
-                <img src="img/a330-900neo.jpg" alt="TAP A330-900neo">
-                <p>Para celebrar la adquisición del avión número 100 de su flota, el A330neo registrado en CS-TUI recibió un gran "100" en su fuselaje. Con este tipo de aeronaves, TAP no solo renueva su flota de largo radio, sino que también se enfoca en la expansión a nuevos destinos en todo el mundo.</p>
-                <p><strong>Marca:</strong> Herpa</p>
-                <p>
-                    <strong>Categoria:</strong> Avión Comercial
-                </p>
-                <p>
-                    <strong>Longitud:</strong> 120mm
-                </p>
-                <p>
-                    <strong>Escala:</strong> 1:500
-                </p>
-                <p><strong>Peso:</strong> 143g</p>
-                <p class="pPrecio"><strong>Precio:</strong> 37€</p>
-                <input type="button" value="Comprar">
+            <div id="listaAviones">
+                
             </div>
-            <div id="terminal" class="divModelismo">
-                <h4>GREAT HALL LOS ANGELES - TOM BRADLEY INTERN. TERMINAL</h4>
-                <img src="img/terminal.jpg" alt="Terminal de Aeropuerto de Los Angeles">
-                <p>La autorización de aterrizaje para sus modelos se encuentra en LAX: ahora puede recrear la Terminal Internacional de Los Ángeles en una escala de 1: 500. Además de las láminas de cartón y las pequeñas piezas de plástico, cada uno de los cuatro conjuntos será una placa base detallada. El corazón de la Terminal Internacional Tom Bradley es la gran sala con sus distintivas e imponentes estructuras de techo. Eso significa que las dos puertas en el área central, ambas con un puente de embarque de pasajeros diferente. Se incluye placa de 40 x 40 cm e instrucciones de montaje central.</p>
-                <p><strong>Marca:</strong> Herpa</p>
-                <p>
-                    <strong>Categoria:</strong> Terminal de aeropuerto
-                </p>
-                <p>
-                    <strong>Longitud:</strong> 40x40cm
-                </p>
-                <p>
-                    <strong>Escala:</strong> 1:500
-                </p>
-                <p><strong>Peso:</strong> 286g</p>
-                <p class="pPrecio"><strong>Precio:</strong> 40€</p>
-                <input type="button" value="Comprar">
-            </div>
-            
         </section>
     </main>
     <footer>
@@ -83,5 +59,6 @@
             <strong>Email: </strong> <a href="mailto:info@modelsalamanca.es">info@modelsalamanca.es</a>
         </p>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
