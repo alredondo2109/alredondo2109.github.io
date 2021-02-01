@@ -132,11 +132,26 @@ Y la flecha de arriba para ir arriba de la pagina
 */
 $(document).ready(function(){
     hora();
-    cargarModelismo();
     cargarMenu();
-    mostrarCarrito();
-    cargarTabla();
     flechaArriba();
+    /*Este es el patchname sirve para obtener la pagina actual*/
+    var path = $(location).attr('pathname');
+    /*El patchArray es el array del patch que el patch divide el barra / en un array*/
+    var pathArray=path.split('/'); 
+    for(var i=0;i<pathArray.length;i++)
+    {
+        if(pathArray[i]=="tren.html" || pathArray[i]=="avion.html" || 
+        pathArray[i]=="barco.html" || pathArray[i]=="coche.html")
+        {
+            cargarModelismo();
+        } else if(pathArray[i]=="precio.html")
+        {
+            cargarTabla();
+        } else if(pathArray[i]=="carrito.html")
+        {
+            mostrarCarrito();
+        }
+    }     
 });
 /*
 Esta funcion sirve para mostrar la hora actual con el intervalo por 1 segundo 
@@ -410,7 +425,8 @@ function mostrarModelismo(modelos)
         });
         /*
             Si no encuentra el pinchado en el carrito que va a añadir el objeto de modelismo 
-            en el modelismosCarritos y el modelismosCarritos va a guardar en el localStorage
+            en el modelismosCarritos y el modelismosCarritos va a guardar en el localStorage.
+            Y muestra el alert que dice: "Ya ha añadido el producto en el carrito"
         */
         if(encontrado==false)
         {
@@ -419,8 +435,8 @@ function mostrarModelismo(modelos)
             unidadCarrito.push(carrito);
             localStorage.setItem('carrito',JSON.stringify(modelismosCarritos));
             localStorage.setItem('unidadCarrito',JSON.stringify(unidadCarrito));
+            alert("Ya ha añadido "+pinchado+" en el carrito");
         }
-        
     });
 }
 /*
@@ -506,7 +522,7 @@ function mostrarCarrito()
         });
         cadena+="</table>";
         cadena+="<div><p>Total: </p><p id='total'>"+suma+"€</p></div>";
-        cadena+="<a class='btnEnviar' href='index.html'>Enviar</a>";
+        cadena+="<a class='btnEnviar'>Enviar</a>";
     }
     /*
     append sirve para añadir los contenidos de cadena a la lista de los carritos
@@ -586,13 +602,21 @@ function mostrarCarrito()
     */
     $(".btnEnviar").click(function()
     {
-        if(JSON.parse(localStorage.getItem('carrito').length!=[]))
+        /*Este que pide la confirmación para enviar a la tienda y va a eliminar los datos
+        del localStorage.
+        Cuando termina el envio que vuelve a la pagina principal (index.html) */
+        var confirmar = confirm("¿Quieres enviar?");
+        if(confirmar==true)
         {
-            alert("Ya ha enviado");
-        }        
-        localStorage.removeItem('carrito');
-        localStorage.removeItem('unidadCarrito');
-        localStorage.clear();
+            if(JSON.parse(localStorage.getItem('carrito').length!=[]))
+            {
+                alert("Ya ha enviado");
+            }        
+            localStorage.removeItem('carrito');
+            localStorage.removeItem('unidadCarrito');
+            localStorage.clear();
+            $(this).attr('href','index.html');
+        }
     });
 }
 /*
